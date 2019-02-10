@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico1-295x300.png' %}"/>
+	<script src="{% static 'js/jquery-3.2.0.min.js' %}" type="text/javascript"></script>
+    <title>Gallary</title>
+</head>
+<body>
+	<div id="toTop"> ^ Наверх </div>
+    <div class="hr"></div>
+	<header class="menu-header">
+		{% block menu %} {% endblock %}
+	</header>
+	<section class="main-image__wrapper">
+		<div class="main-image__content main-image__bg">
+		</div>
+	</section>
+	<section class="actual-news-wrap">
+		<div class="actual-news-content">
+			<div class="category__links">
+				<a href="" class="category__link">#int20h</a>
+			</div>
+			<div class="title-news__header">
+				<h2 class="title-news__content">Hackathon INT20H</h2>
+			</div>
+			<div class="news-content__paragraph">
+				<p class="news-content_text">
+					Хакатон (англ. hackathon, від hack (див. хакер) та marathon — марафон) — захід, під час якого різні спеціалісти в галузі розробки програмного забезпечення інтенсивно і згуртовано разом працюють над розв'язанням якоїсь проблеми, або створенням нового додатку чи сервісу.
+                    Зазвичай хакатони тривають від одного дня до тижня. Деякі хакатони призначені для освітніх або соціальних цілей, але часто задачею хакатона є створення повноцінного програмного забезпечення.
+                    Кожний хакатон фокусовано на певні області, наприклад, мови програмування, операційні системи, додатки, програмний інтерфейс (API).
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="photo_list_block" class="list-news__wrap">
+       {% block content %} {% endblock %}
+	</section>
+	<footer class="footer-block__wrap">
+		<div class="footer-content__row">
+			<div class="footer-content__wrap">
+				<span class="footer-content__text">Copyright © 2019 <br> Gallery of emotions!</span>
+			</div>
+			<div class="social-btn__content">
+				<span class="social-btn__label">Follow </span>
+				<input type="button" class="facebook__btn  social-btn-background">
+				<input type="button" class="twitter__btn social-btn-background">
+				<input type="button" class="inst__btn social-btn-background">
+			</div>
+		</div>
+	</footer>
+	<script src="{% static 'js/to_up.js' %}" type="text/javascript"></script>
+</body>
+</html>
